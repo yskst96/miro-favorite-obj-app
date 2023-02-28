@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
 async function addSticky() {
   const stickyNote = await miro.board.createStickyNote({
@@ -41,5 +41,6 @@ const App: React.FC = () => {
 };
 
 const container = document.getElementById('root');
+if (!container) throw Error()
 const root = createRoot(container);
 root.render(<App />);
